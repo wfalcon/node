@@ -13,6 +13,8 @@ app.use('/', express.static(__dirname));
 
 app.use(favicon(__dirname + '/favicon.ico'));
 
+app.use(express.static('public'));
+
 app.listen(app.get('port'), function() {
     console.log(colors.green.underline('Server started: http://localhost:' + app.get('port') + '/'));
 });
